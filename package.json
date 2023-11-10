@@ -29,7 +29,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.8.1",
-    "cron": "^3.1.6"
+    "cron": "^3.1.6",
+    "fast-glob": "^3.3.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
