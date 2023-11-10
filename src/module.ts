@@ -1,19 +1,59 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { fileURLToPath } from 'url'
+import { defineNuxtModule, createResolver, addTemplate, addServerPlugin } from '@nuxt/kit'
+import fg from 'fast-glob'
+import type { CronJob, CronOptions, CronTick, CronTime } from './types'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions extends CronOptions {}
+
+export function defineCronHandler(time: CronTime, callback: CronTick, options?: ModuleOptions): CronJob {
+  return { time, callback, options }
+}
+
+async function scanHandlers(path: string): Promise<string[]> {
+  const files: string[] = []
+
+  const updatedFiles = await fg('**/*.{ts,js,mjs}', {
+    cwd: path,
+    absolute: true,
+    onlyFiles: true
+  })
+
+  files.push(...new Set(updatedFiles))
+
+  return files
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule'
+    name: 'nuxt-cron',
+    configKey: 'cron'
   },
-  // Default configuration options of the Nuxt module
   defaults: {},
-  setup (options, nuxt) {
-    const resolver = createResolver(import.meta.url)
+  async setup(options, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    const files = await scanHandlers(resolve(nuxt.options.srcDir, 'server/cron'))
+    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+
+    nuxt.options.build.transpile.push(runtimeDir)
+
+    addTemplate({
+      filename: 'cron-handler.ts',
+      write: true,
+      getContents() {
+        return `
+          import { createCronHandler } from '${resolve(runtimeDir, 'server')}'
+          ${files.map((file, index) => `import cronJob${index} from '${file.replace('.ts', '')}'`).join('\n')}
+
+          export default defineNitroPlugin(() => {
+            createCronHandler({
+              ${files.map((_, index) => `cronJob${index}`).join(',\n')}
+            }, ${JSON.stringify(options)})
+          })
+        `
+      }
+    })
+
+    addServerPlugin(resolve(nuxt.options.buildDir, 'cron-handler.ts'))
   }
 })
