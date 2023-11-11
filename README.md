@@ -1,94 +1,103 @@
-<!--
-Get your module up and running quickly.
+![nuxt-cron](docs/public/cover.jpg)
 
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
-
-# My Module
+# [⚠️ WIP] Nuxt Cron
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+A Nuxt module for cron job in your app.
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [📖 Documentation](#)
+- [🏀 Playground](#)
+- [✨ Releases](#)
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- 👌&nbsp; 19 time presets
+- 🕔️&nbsp; Time zone support
+- 🪄️&nbsp; TypeScript support
+- ✨&nbsp; Auto imports enabled
+- 📦&nbsp; Extendable by [Nuxt modules](https://nuxt.com/modules)
 
-## Quick Setup
-
-1. Add `my-module` dependency to your project
+## Installation
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D nuxt-cron
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev nuxt-cron
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev nuxt-cron
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+## Usage
+
+### Setup
+
+Add `nuxt-cron` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    'nuxt-cron'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+### Configuration
 
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Generate type stubs
-npm run dev:prepare
-
-# Develop with the playground
-npm run dev
-
-# Build the playground
-npm run dev:build
-
-# Run ESLint
-npm run lint
-
-# Run Vitest
-npm run test
-npm run test:watch
-
-# Release new version
-npm run release
+You can configure the module by adding a `nuxt-cron` section to your nuxt.config file.
+```js
+export default defineNuxtConfig({
+  cron: {
+    runOnInit: true,
+    timeZone: 'Africa/Abidjan',
+    jobsDir: 'cron'
+  }
+})
 ```
 
+by default, `nuxt-cron` will auto-import your cron from the models directory from server directory. You can change this behavior by setting the `jobsDir` option.
+
+## API
+
+### defineCronHandler
+
+This function creates a new cron job. Example usage:
+
+```js
+export default defineCronHandler('everySecond', () => {
+  console.log('I run every seconds')
+})
+```
+
+or use with params:
+
+```js
+export default defineCronHandler('everySecond', () => {
+  console.log('I run every seconds')
+}, { 
+    runOnInit: true,
+    timeZone: 'Africa/Abidjan'
+})
+```
+
+
+
+
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-cron/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/nuxt-cron
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-cron.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/nuxt-cron
 
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[license-src]: https://img.shields.io/npm/l/nuxt-cron.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/nuxt-cron
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
