@@ -25,13 +25,13 @@ A Nuxt module for cron job in your app.
 
 ```bash
 # Using pnpm
-pnpm add -D nuxt-cron
+pnpm add nuxt-cron
 
 # Using yarn
-yarn add --dev nuxt-cron
+yarn add nuxt-cron
 
 # Using npm
-npm install --save-dev nuxt-cron
+npm install nuxt-cron
 ```
 
 ## Usage
