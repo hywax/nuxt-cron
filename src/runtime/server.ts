@@ -1,5 +1,5 @@
-import { CronJob } from 'cron'
-import type { CronJobs, CronOptions, CronTime } from '../types'
+import { CronJob as Cron } from 'cron'
+import type { CronJob, CronJobs, CronOptions, CronTick, CronTime } from '../types'
 
 const cronTimeHumanFormat: Record<CronTime, string> = {
   everySecond: '* * * * * *',
@@ -38,7 +38,7 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
       ...jobs[fn].options
     }
 
-    CronJob.from({
+    Cron.from({
       cronTime: prepareCronTime(jobs[fn].time),
       onTick: jobs[fn].callback,
       start: true,
@@ -46,4 +46,8 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
       runOnInit: options?.runOnInit
     })
   })
+}
+
+export function defineCronHandler(time: CronTime, callback: CronTick, options?: CronOptions): CronJob {
+  return { time, callback, options }
 }

@@ -70,6 +70,8 @@ by default, `nuxt-cron` will auto-import your cron from the models directory fro
 This function creates a new cron job. Example usage:
 
 ```js
+import { defineCronHandler } from '#nuxt/cron'
+
 export default defineCronHandler('everySecond', () => {
   console.log('I run every seconds')
 })
@@ -78,6 +80,8 @@ export default defineCronHandler('everySecond', () => {
 or use with params:
 
 ```js
+import { defineCronHandler } from '#nuxt/cron'
+
 export default defineCronHandler('everySecond', () => {
   console.log('I run every seconds')
 }, { 
