@@ -1,8 +1,11 @@
 {
   "name": "nuxt-cron",
   "version": "1.0.0",
-  "description": "Cron nuxt 3 module",
-  "repository": "hywax/nuxt-cron",
+  "description": "A Nuxt module for cron jobs in your app.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hywax/nuxt-cron.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -25,7 +28,8 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
     "@nuxt/kit": "^3.8.1",
@@ -41,7 +45,15 @@
     "@types/node": "^20.8.10",
     "changelogen": "^0.5.5",
     "eslint": "^8.53.0",
+    "lint-staged": "^15.0.2",
     "nuxt": "^3.8.1",
+    "simple-git-hooks": "^2.9.0",
     "vitest": "^0.33.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
