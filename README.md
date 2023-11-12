@@ -1,4 +1,4 @@
-![nuxt-cron](docs/public/cover.jpg)
+[![nuxt-cron](docs/public/cover.jpg)](https://nuxt-cron.hywax.space)
 
 # [⚠️ WIP] Nuxt Cron
 
@@ -9,9 +9,9 @@
 
 A Nuxt module for cron job in your app.
 
-- [📖 Documentation](#)
-- [🏀 Playground](#)
-- [✨ Releases](#)
+- [📖 Documentation](https://nuxt-cron.hywax.space)
+- [🏀 Playground](https://nuxt-cron.hywax.space/playground)
+- [✨ Releases](https://github.com/hywax/nuxt-cron/releases)
 
 ## Features
 
@@ -25,13 +25,13 @@ A Nuxt module for cron job in your app.
 
 ```bash
 # Using pnpm
-pnpm add nuxt-cron
+pnpm add nuxt-cron -D
 
 # Using yarn
-yarn add nuxt-cron
+yarn add nuxt-cron -D
 
 # Using npm
-npm install nuxt-cron
+npm install nuxt-cron -D
 ```
 
 ## Usage
