@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  myModule: {},
+  cron: {},
   devtools: { enabled: true }
 })
