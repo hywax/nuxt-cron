@@ -1,6 +1,6 @@
 {
   "name": "nuxt-cron",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Nuxt module for cron jobs in your app.",
   "repository": {
     "type": "git",
@@ -32,8 +32,7 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "docs": "nuxi dev docs",
-    "docs:build": "CI=true nuxi generate docs",
-    "postinstall": "npx simple-git-hooks"
+    "docs:build": "CI=true nuxi generate docs"
   },
   "dependencies": {
     "@nuxt/kit": "^3.8.1",
