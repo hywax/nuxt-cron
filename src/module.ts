@@ -56,11 +56,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     addTemplate({
       filename: 'types/nuxt-cron.d.ts',
-      getContents: () => [
-        'declare module \'#nuxt/cron\' {',
-        `  const defineCronHandler: typeof import('${resolve(runtimeDir, 'server')}')['defineCronHandler']`,
-        '}',
-      ].join('\n'),
+      getContents: () =>
+        [
+          "declare module '#nuxt/cron' {",
+          `  const defineCronHandler: typeof import('${resolve(runtimeDir, 'server')}')['defineCronHandler']`,
+          '}'
+        ].join('\n')
     })
 
     nuxt.hook('nitro:config', (_config) => {

@@ -42,15 +42,14 @@ Add `nuxt-cron` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    'nuxt-cron'
-  ]
+  modules: ['nuxt-cron']
 })
 ```
 
 ### Configuration
 
 You can configure the module by adding a `nuxt-cron` section to your nuxt.config file.
+
 ```js
 export default defineNuxtConfig({
   cron: {
@@ -82,26 +81,25 @@ or use with params:
 ```js
 import { defineCronHandler } from '#nuxt/cron'
 
-export default defineCronHandler('everySecond', () => {
-  console.log('I run every seconds')
-}, { 
+export default defineCronHandler(
+  'everySecond',
+  () => {
+    console.log('I run every seconds')
+  },
+  {
     runOnInit: true,
     timeZone: 'Africa/Abidjan'
-})
+  }
+)
 ```
 
-
-
-
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-cron/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/nuxt-cron
-
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-cron.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-downloads-href]: https://npmjs.com/package/nuxt-cron
-
 [license-src]: https://img.shields.io/npm/l/nuxt-cron.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/nuxt-cron
-
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
