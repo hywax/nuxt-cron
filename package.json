@@ -26,7 +26,9 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
-    "lint": "eslint .",
+    "lint:es": "eslint --ext .js,.ts,.vue",
+    "lint:prettier": "prettier --check .",
+    "lint:fix": "prettier --write --list-different . && yarn lint:es --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
     "docs": "nuxi dev docs",
@@ -44,11 +46,16 @@
     "@nuxt/module-builder": "^0.5.3",
     "@nuxt/schema": "^3.8.1",
     "@nuxt/test-utils": "^3.8.1",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^20.8.10",
+    "@typescript-eslint/parser": "^6.10.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "lint-staged": "^15.0.2",
     "nuxt": "^3.8.1",
+    "prettier": "^3.1.0",
     "simple-git-hooks": "^2.9.0",
     "vitest": "^0.33.0"
   },
@@ -56,6 +63,6 @@
     "pre-commit": "yarn lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "yarn lint:prettier"
   }
 }

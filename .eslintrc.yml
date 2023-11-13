@@ -1,0 +1,15 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - '@nuxtjs/eslint-config-typescript'
+  - plugin:prettier/recommended
+parser: vue-eslint-parser
+parserOptions:
+  ecmaVersion: latest
+  parser: '@typescript-eslint/parser'
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+  - vue
+rules: {}
