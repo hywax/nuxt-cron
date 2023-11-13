@@ -1,5 +1,5 @@
 import { CronJob as Cron } from 'cron'
-import type { CronJob, CronJobs, CronOptions, CronTick, CronTime } from '../types'
+import type { CronJob, CronJobs, CronOptions, CronTick, CronTime } from './types'
 
 const cronTimeHumanFormat: Record<CronTime, string> = {
   everySecond: '* * * * * *',

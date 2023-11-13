@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url'
 import { defineNuxtModule, createResolver, addTemplate, addServerPlugin } from '@nuxt/kit'
 import fg from 'fast-glob'
-import type { CronOptions } from './types'
+import type { CronOptions } from './runtime/types'
 
 export interface ModuleOptions extends CronOptions {
   jobsDir: string
@@ -42,7 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
       write: true,
       getContents() {
         return `
-          import { createCronHandler } from '${resolve(runtimeDir, 'server')}'
+          import { createCronHandler } from '${resolve('./runtime/server')}'
           ${files.map((file, index) => `import cronJob${index} from '${file.replace('.ts', '')}'`).join('\n')}
 
           export default defineNitroPlugin(() => {
@@ -59,14 +59,19 @@ export default defineNuxtModule<ModuleOptions>({
       getContents: () =>
         [
           "declare module '#nuxt/cron' {",
-          `  const defineCronHandler: typeof import('${resolve(runtimeDir, 'server')}')['defineCronHandler']`,
+          `  const defineCronHandler: typeof import('${resolve('./runtime/server')}').defineCronHandler`,
           '}'
         ].join('\n')
     })
 
     nuxt.hook('nitro:config', (_config) => {
-      _config.alias!['#nuxt/cron'] = resolve('./runtime/server')
-      _config.externals?.inline?.push(resolve('./runtime/server'))
+      _config.alias = _config.alias || {}
+      _config.alias['#nuxt/cron'] = resolve('./runtime/server')
+
+      if (_config.imports) {
+        _config.imports.dirs = _config.imports.dirs || []
+        _config.imports.dirs?.push(options.jobsDir)
+      }
     })
 
     nuxt.hook('prepare:types', (options) => {
