@@ -45,7 +45,12 @@ export default defineNuxtModule<ModuleOptions>({
           import { createCronHandler } from '${resolve('./runtime/server')}'
           ${files.map((file, index) => `import cronJob${index} from '${file.replace('.ts', '')}'`).join('\n')}
 
-          export default defineNitroPlugin(() => {
+          export default defineNitroPlugin((nitro) => {
+            // Disabling cron so it doesn't block the flow
+            if (process.env.NODE_ENV === 'prerender') {
+              return;
+            }
+
             createCronHandler({
               ${files.map((_, index) => `cronJob${index}`).join(',\n')}
             }, ${JSON.stringify(options)})
