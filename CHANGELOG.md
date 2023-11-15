@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.0
+
+- Splitting `CronTime` into two interfaces
+- Add Graceful Shutdown hook
+
 ## v1.3.0
 
 - Init nuxt cron module message
