@@ -1,5 +1,5 @@
 export type CronTime =
-  | (string & {})
+  | (string & object)
   | 'everySecond'
   | 'everyMinute'
   | 'everyTwoMinutes'

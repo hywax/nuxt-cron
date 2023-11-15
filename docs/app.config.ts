@@ -5,31 +5,31 @@ export default defineAppConfig({
     image: '/cover.jpg',
     socials: {
       twitter: 'hywax_',
-      github: 'hywax/nuxt-cron'
+      github: 'hywax/nuxt-cron',
     },
     github: {
       dir: 'docs/content',
       branch: 'main',
       repo: 'nuxt-cron',
       owner: 'hywax',
-      edit: true
+      edit: true,
     },
     aside: {
       level: 1,
       collapsed: false,
-      exclude: []
+      exclude: [],
     },
     header: {
       logo: true,
       showLinkIcon: true,
-      exclude: []
+      exclude: [],
     },
     footer: {
       credits: {
         icon: 'IconHywax',
         text: 'Powered by Hywax',
-        href: 'https://hywax.space'
-      }
-    }
-  }
+        href: 'https://hywax.space',
+      },
+    },
+  },
 })

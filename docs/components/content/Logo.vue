@@ -1,6 +1,6 @@
 <template>
   <div class="logo">
-    <img src="/icon.svg" alt="" />
+    <img src="/icon.svg" alt="">
     <span>
       Nuxt
       <i>Cron</i>

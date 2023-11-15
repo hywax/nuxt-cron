@@ -1,5 +1,5 @@
-import { fileURLToPath } from 'url'
-import { defineNuxtModule, createResolver, addTemplate, addServerPlugin } from '@nuxt/kit'
+import { fileURLToPath } from 'node:url'
+import { addServerPlugin, addTemplate, createResolver, defineNuxtModule } from '@nuxt/kit'
 import fg from 'fast-glob'
 import type { CronOptions } from './runtime/types'
 
@@ -13,7 +13,7 @@ async function scanHandlers(path: string): Promise<string[]> {
   const updatedFiles = await fg('**/*.{ts,js,mjs}', {
     cwd: path,
     absolute: true,
-    onlyFiles: true
+    onlyFiles: true,
   })
 
   files.push(...new Set(updatedFiles))
@@ -24,10 +24,10 @@ async function scanHandlers(path: string): Promise<string[]> {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-cron',
-    configKey: 'cron'
+    configKey: 'cron',
   },
   defaults: {
-    jobsDir: 'cron'
+    jobsDir: 'cron',
   },
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
@@ -56,17 +56,17 @@ export default defineNuxtModule<ModuleOptions>({
             }, ${JSON.stringify(options)})
           })
         `
-      }
+      },
     })
 
     addTemplate({
       filename: 'types/nuxt-cron.d.ts',
       getContents: () =>
         [
-          "declare module '#nuxt/cron' {",
+          'declare module \'#nuxt/cron\' {',
           `  const defineCronHandler: typeof import('${resolve('./runtime/server')}').defineCronHandler`,
-          '}'
-        ].join('\n')
+          '}',
+        ].join('\n'),
     })
 
     nuxt.hook('nitro:config', (_config) => {
@@ -84,5 +84,5 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     addServerPlugin(resolve(nuxt.options.buildDir, 'cron-handler.ts'))
-  }
+  },
 })

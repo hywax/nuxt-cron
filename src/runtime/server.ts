@@ -20,7 +20,7 @@ const cronTimeHumanFormat: Record<CronTime, string> = {
   daily: '0 0 * * *',
   weekly: '0 0 * * 0',
   quarterly: '0 0 1 */3 *',
-  yearly: '0 0 1 1 *'
+  yearly: '0 0 1 1 *',
 }
 
 function prepareCronTime(time: CronTime): string {
@@ -35,7 +35,7 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
   Object.keys(jobs).forEach((fn) => {
     options = {
       ...options,
-      ...jobs[fn].options
+      ...jobs[fn].options,
     }
 
     Cron.from({
@@ -43,7 +43,7 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
       onTick: jobs[fn].callback,
       start: true,
       timeZone: options?.timeZone,
-      runOnInit: options?.runOnInit
+      runOnInit: options?.runOnInit,
     })
   })
 }
