@@ -51,9 +51,15 @@ export default defineNuxtModule<ModuleOptions>({
               return;
             }
 
-            createCronHandler({
+            const cronStack = createCronHandler({
               ${files.map((_, index) => `cronJob${index}`).join(',\n')}
             }, ${JSON.stringify(options)})
+
+            nitro.hooks.hookOnce('close', async () => {
+              cronStack.forEach(job => {
+                job.stop()
+              })
+            })
           })
         `
       },

@@ -23,21 +23,27 @@ const cronTimeHumanFormat: Record<CronPresets, string> = {
   yearly: '0 0 1 1 *',
 }
 
-export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
+export function createCronHandler(jobs: CronJobs, options?: CronOptions): Cron[] {
+  const cronStack: Cron[] = []
+
   Object.keys(jobs).forEach((fn) => {
     options = {
       ...options,
       ...jobs[fn].options,
     }
 
-    Cron.from({
+    const cron: Cron = Cron.from({
       cronTime: jobs[fn].time,
       onTick: jobs[fn].callback,
       start: true,
       timeZone: options?.timeZone,
       runOnInit: options?.runOnInit,
     })
+
+    cronStack.push(cron)
   })
+
+  return cronStack
 }
 
 export function defineCronHandler(time: CronPresets | CronTime, callback: CronTick, options?: CronOptions): CronJob {
