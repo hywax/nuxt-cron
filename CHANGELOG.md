@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.3.0
+
+- Init nuxt cron module message
+- Removed `Prettier`
+- Removed unused dependencies
+
 ## v1.2.0
 
 - Disabling cron so it doesn't block the flow
