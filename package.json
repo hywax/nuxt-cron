@@ -40,7 +40,7 @@
     "fast-glob": "^3.3.2"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
+    "@nuxt/devtools": "^1.0.2",
     "@nuxt/eslint-config": "^0.2.0",
     "@nuxt/module-builder": "^0.5.3",
     "@nuxt/schema": "^3.8.1",
