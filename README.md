@@ -1,13 +1,13 @@
-[![nuxt-cron](docs/public/cover.jpg)](https://nuxt-cron.hywax.space)
+[![nuxt-cron](https://raw.githubusercontent.com/hywax/nuxt-cron/main/docs/public/cover.jpg)](https://nuxt-cron.hywax.space)
 
-# [⚠️ WIP] Nuxt Cron
+# Nuxt Cron
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-A Nuxt module for cron job in your app.
+A Nuxt module for cron jobs in your app.
 
 - [📖 Documentation](https://nuxt-cron.hywax.space)
 - [🏀 Playground](https://nuxt-cron.hywax.space/playground)
