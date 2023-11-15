@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./docs
-          file: ./Dockerfile
+          file: ./docs/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nuxt-cron:latest
