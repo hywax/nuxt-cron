@@ -7,6 +7,7 @@ export default antfu({}, ...compat.config({
   rules: {
     'curly': 'off',
     'no-console': 'off',
+    'style/brace-style': 'off',
     'vue/block-order': ['error', {
       order: ['template', 'script', 'style'],
     }],

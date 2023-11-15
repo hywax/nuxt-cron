@@ -1,5 +1,4 @@
-export type CronTime =
-  | (string & object)
+export type CronPresets =
   | 'everySecond'
   | 'everyMinute'
   | 'everyTwoMinutes'
@@ -20,6 +19,8 @@ export type CronTime =
   | 'quarterly'
   | 'yearly'
 
+export type CronTime = () => string
+
 export type CronTick = () => void
 
 export interface CronOptions {
@@ -28,7 +29,7 @@ export interface CronOptions {
 }
 
 export interface CronJob {
-  time: CronTime
+  time: string
   callback: CronTick
   options?: CronOptions
 }

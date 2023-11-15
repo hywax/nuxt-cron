@@ -1,7 +1,7 @@
 import { CronJob as Cron } from 'cron'
-import type { CronJob, CronJobs, CronOptions, CronTick, CronTime } from './types'
+import type { CronJob, CronJobs, CronOptions, CronPresets, CronTick, CronTime } from './types'
 
-const cronTimeHumanFormat: Record<CronTime, string> = {
+const cronTimeHumanFormat: Record<CronPresets, string> = {
   everySecond: '* * * * * *',
   everyMinute: '* * * * *',
   everyTwoMinutes: '*/2 * * * *',
@@ -23,14 +23,6 @@ const cronTimeHumanFormat: Record<CronTime, string> = {
   yearly: '0 0 1 1 *',
 }
 
-function prepareCronTime(time: CronTime): string {
-  if (Object.hasOwn(cronTimeHumanFormat, time)) {
-    return cronTimeHumanFormat[time]
-  }
-
-  return time
-}
-
 export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
   Object.keys(jobs).forEach((fn) => {
     options = {
@@ -39,7 +31,7 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
     }
 
     Cron.from({
-      cronTime: prepareCronTime(jobs[fn].time),
+      cronTime: jobs[fn].time,
       onTick: jobs[fn].callback,
       start: true,
       timeZone: options?.timeZone,
@@ -48,6 +40,18 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions) {
   })
 }
 
-export function defineCronHandler(time: CronTime, callback: CronTick, options?: CronOptions): CronJob {
-  return { time, callback, options }
+export function defineCronHandler(time: CronPresets | CronTime, callback: CronTick, options?: CronOptions): CronJob {
+  let timeValue = ''
+
+  if (typeof time === 'function') {
+    timeValue = time()
+  } else {
+    timeValue = cronTimeHumanFormat[time]
+  }
+
+  return {
+    time: timeValue,
+    callback,
+    options,
+  }
 }
