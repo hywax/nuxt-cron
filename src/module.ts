@@ -83,6 +83,10 @@ export default defineNuxtModule<ModuleOptions>({
       options.references.push({ path: resolve(nuxt.options.buildDir, 'types/nuxt-cron.d.ts') })
     })
 
+    nuxt.hooks.hook('nitro:init', (nitro) => {
+      nitro.logger.info(`Nuxt Cron. Jobs: ${files.length}`)
+    })
+
     addServerPlugin(resolve(nuxt.options.buildDir, 'cron-handler.ts'))
   },
 })
