@@ -1,6 +1,4 @@
 {
-  "name": "nuxt-cron-docus",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
@@ -11,7 +9,9 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "^1.15.0",
-    "@nuxthq/studio": "^1.0.2",
-    "nuxt": "^3.8.0"
-  }
+    "@nuxt/eslint-config": "^0.2.0",
+    "eslint": "^8.53.0",
+    "nuxt": "^3.8.1"
+  },
+  "dependencies": {}
 }
