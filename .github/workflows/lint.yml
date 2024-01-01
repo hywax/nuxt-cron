@@ -23,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: ESLint
-        run: pnpm run lint
+        run: yarn run lint
