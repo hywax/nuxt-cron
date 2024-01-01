@@ -1,15 +1,24 @@
 import antfu from '@antfu/eslint-config'
-import { FlatCompat } from '@eslint/eslintrc'
 
-const compat = new FlatCompat()
-
-export default antfu({}, ...compat.config({
-  rules: {
-    'curly': 'off',
-    'no-console': 'off',
-    'style/brace-style': 'off',
-    'vue/block-order': ['error', {
-      order: ['template', 'script', 'style'],
-    }],
+export default antfu({
+  typescript: true,
+  ignores: [
+    '.output',
+    'dist',
+    'node_modules',
+  ],
+  vue: {
+    overrides: {
+      'vue/block-order': ['error', {
+        order: ['template', 'script', 'style'],
+      }],
+    },
   },
-}))
+  rules: {
+    'style/brace-style': ['error', '1tbs'],
+    'style/arrow-parens': ['error', 'always'],
+    'no-console': 'off',
+    'curly': ['error', 'all'],
+    'antfu/consistent-list-newline': 'off',
+  },
+})
