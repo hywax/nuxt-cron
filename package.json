@@ -1,7 +1,7 @@
 {
   "name": "nuxt-cron",
   "type": "module",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A Nuxt module for cron jobs in your app.",
   "license": "MIT",
   "repository": {
