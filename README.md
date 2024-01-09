@@ -19,6 +19,7 @@ A Nuxt module for cron jobs in your app.
 - 🕔️&nbsp; Time zone support
 - 🪄️&nbsp; TypeScript support
 - ✨&nbsp; Auto imports enabled
+- ⚡&nbsp; Zero configuration to start
 - 📦&nbsp; Extendable by [Nuxt modules](https://nuxt.com/modules)
 
 ## Installation
@@ -83,16 +84,9 @@ or use with params:
 // server/cron/job.ts
 import { defineCronHandler } from '#nuxt/cron'
 
-export default defineCronHandler(
-  'everySecond',
-  () => {
-    console.log('I run every seconds')
-  },
-  {
-    runOnInit: true,
-    timeZone: 'Africa/Abidjan'
-  }
-)
+export default defineCronHandler('everySecond', () => {
+  console.log('I run every seconds')
+}, { runOnInit: true })
 ```
 
 <!-- Badges -->

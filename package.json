@@ -30,8 +30,9 @@
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "docs": "nuxi dev docs",
-    "docs:build": "CI=true nuxi generate docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@nuxt/kit": "^3.8.1",
@@ -51,6 +52,7 @@
     "lint-staged": "^15.0.2",
     "nuxt": "^3.8.1",
     "simple-git-hooks": "^2.9.0",
+    "vitepress": "^1.0.0-rc.36",
     "vitest": "^1.1.1"
   },
   "simple-git-hooks": {
