@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.2
+
+- Update deps
+- Migrate docs to vitepress
+
 ## v1.4.1
 
 - Update deps
