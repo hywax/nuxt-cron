@@ -47,13 +47,13 @@
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.0",
     "@nuxt/test-utils": "^3.11.0",
-    "@types/node": "^20.11.15",
+    "@types/node": "^20.11.16",
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "lint-staged": "^15.2.1",
     "nuxt": "^3.10.0",
     "simple-git-hooks": "^2.9.0",
-    "vitepress": "^1.0.0-rc.40",
+    "vitepress": "^1.0.0-rc.41",
     "vitest": "^1.2.2"
   },
   "simple-git-hooks": {
