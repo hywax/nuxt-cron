@@ -40,7 +40,7 @@
     "fast-glob": "^3.3.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.3",
+    "@antfu/eslint-config": "^2.6.4",
     "@hywax/vitepress-yandex-metrika": "^0.3.2",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
