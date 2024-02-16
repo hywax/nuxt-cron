@@ -54,7 +54,7 @@
     "nuxt": "^3.10.2",
     "simple-git-hooks": "^2.9.0",
     "vitepress": "^1.0.0-rc.42",
-    "vitest": "^1.2.2"
+    "vitest": "^1.3.0"
   },
   "simple-git-hooks": {
     "pre-commit": "yarn lint-staged"
