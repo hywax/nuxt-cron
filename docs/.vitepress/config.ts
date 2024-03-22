@@ -71,6 +71,7 @@ export default defineConfig({
           { text: 'Base', link: '/base' },
           { text: 'Run on init', link: '/with-params' },
           { text: 'Custom time', link: '/custom-time' },
+          { text: 'Async', link: '/async' },
         ],
       },
       {
