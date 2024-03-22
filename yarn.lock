@@ -8064,11 +8064,6 @@ sigstore@^2.2.0:
     "@sigstore/tuf" "^2.3.0"
     "@sigstore/verify" "^0.1.0"
 
-simple-git-hooks@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/simple-git-hooks/-/simple-git-hooks-2.11.0.tgz#23339fbb8ca3bf5458ef270abab447110160ab98"
-  integrity sha512-Wab2uzjGJEL8Kx+2UY8waUSfkiolt2RbaAJWvPCjaAEXrrKoS7JqPk4STiIVl/yt3asZRUzFoK2ryhwvgh5rYw==
-
 simple-git@^3.22.0:
   version "3.22.0"
   resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-3.22.0.tgz#616d41c661e30f9c65778956317d422b1729a242"
