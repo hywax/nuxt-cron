@@ -75,6 +75,15 @@ export default defineConfig({
         ],
       },
       {
+        text: 'Community',
+        base: '/community',
+        collapsed: true,
+        items: [
+          { text: 'Contributing', link: '/contributing' },
+          { text: 'Code of Conduct', link: '/code-of-conduct' },
+        ],
+      },
+      {
         text: 'Other',
         base: '/other',
         collapsed: true,
