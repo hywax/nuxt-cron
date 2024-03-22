@@ -27,6 +27,7 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "yarn lint && yarn prepack && changelogen --release --push && npm publish",
+    "typecheck": "nuxi typecheck",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
