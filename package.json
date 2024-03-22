@@ -21,6 +21,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "husky install",
     "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
@@ -52,6 +53,7 @@
     "@types/node": "^20.11.30",
     "changelogen": "^0.5.5",
     "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "nuxt": "^3.11.1",
     "simple-git-hooks": "^2.11.0",
