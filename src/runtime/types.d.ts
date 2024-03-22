@@ -21,7 +21,7 @@ export type CronPresets =
 
 export type CronTime = () => string
 
-export type CronTick = () => void
+export type CronTick = () => void | Promise<void>
 
 export interface CronOptions {
   runOnInit?: boolean
