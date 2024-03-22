@@ -1,0 +1,13 @@
+name: Question
+description: Further information is requested
+title: '[QUESTION] <title>'
+labels: [question]
+
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Outline your question in a clear and concise manner
+    validations:
+      required: true
