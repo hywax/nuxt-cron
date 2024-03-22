@@ -1,5 +1,5 @@
 {
-  "name": "my-module-playground",
+  "name": "nuxt-cron-playground",
   "type": "module",
   "private": true,
   "scripts": {
