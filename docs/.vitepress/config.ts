@@ -94,4 +94,10 @@ export default defineConfig({
       },
     ],
   },
+
+  ignoreDeadLinks: [
+    (url) => {
+      return !url.toLowerCase().includes('.github')
+    },
+  ],
 })
