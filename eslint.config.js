@@ -2,12 +2,6 @@ import antfu from '@antfu/eslint-config'
 
 export default antfu({
   typescript: true,
-  ignores: [
-    '.output',
-    '.github',
-    'dist',
-    'node_modules',
-  ],
   vue: {
     overrides: {
       'vue/block-order': ['error', {
@@ -22,4 +16,11 @@ export default antfu({
     'curly': ['error', 'all'],
     'antfu/consistent-list-newline': 'off',
   },
+}, {
+  ignores: [
+    '.github',
+    '.output',
+    'dist',
+    'node_modules',
+  ],
 })
