@@ -36,6 +36,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: yarn install
+      - name: Build prepare
+        run: dev:prepare
       - name: Build with VitePress
         run: |
           yarn docs:build
