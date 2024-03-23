@@ -58,7 +58,8 @@
     "lint-staged": "^15.2.2",
     "nuxt": "^3.11.1",
     "vitepress": "^1.0.0",
-    "vitest": "^1.4.0"
+    "vitest": "^1.4.0",
+    "vue-tsc": "^2.0.7"
   },
   "lint-staged": {
     "*": "yarn lint:fix"
