@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build prepare
-        run: dev:prepare
+        run: yarn dev:prepare
       - name: Build with VitePress
         run: |
           yarn docs:build
