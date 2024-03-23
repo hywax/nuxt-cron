@@ -5,7 +5,6 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
 
 A Nuxt module for cron jobs in your app.
 
@@ -89,6 +88,22 @@ export default defineCronHandler('everySecond', () => {
 }, { runOnInit: true })
 ```
 
+More examples can be found [here](https://nuxt-cron.hywax.space/examples/base.html).
+
+## Credits
+
+A huge thank you to everyone who is helping to improve `nuxt-cron`. Thanks to you, the project can evolve!
+
+### Contributors
+
+To become a contributor, please follow our [contributing guide](https://nuxt-cron.hywax.space/community/contributing.html).
+
+<img src="https://raw.githubusercontent.com/hywax/nuxt-cron/main/docs/public/contributors.svg" alt="nuxt-cron" width="100%"/>
+
+## License
+
+This app is open-sourced software licensed under the [MIT license](https://github.com/hywax/nuxt-cron/blob/main/LICENSE).
+
 <!-- Badges -->
 
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-cron/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
@@ -97,5 +112,3 @@ export default defineCronHandler('everySecond', () => {
 [npm-downloads-href]: https://npmjs.com/package/nuxt-cron
 [license-src]: https://img.shields.io/npm/l/nuxt-cron.svg?style=flat&colorA=18181B&colorB=28CF8D
 [license-href]: https://npmjs.com/package/nuxt-cron
-[nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com
