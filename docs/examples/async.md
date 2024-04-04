@@ -6,7 +6,7 @@
 // server/cron/job.ts
 import { defineCronHandler } from '#nuxt/cron'
 
-export default defineCronHandler('houdrly', async () => {
+export default defineCronHandler('hourly', async () => {
   const data = $fetch('https://jsonplaceholder.typicode.com/todos/1')
 
   console.log(data)
