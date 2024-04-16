@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.1
+
+[compare changes](https://github.com/hywax/nuxt-cron/compare/v1.5.0...v1.5.1)
+
+### 📖 Documentation
+
+- Update readme ([d887816](https://github.com/hywax/nuxt-cron/commit/d887816))
+- Update async.md ([#54](https://github.com/hywax/nuxt-cron/pull/54))
+
+### 🏡 Chore
+
+- Update CONTRIBUTORS ([2bddae0](https://github.com/hywax/nuxt-cron/commit/2bddae0))
+- Eslint config ([08e8efb](https://github.com/hywax/nuxt-cron/commit/08e8efb))
+- Update CONTRIBUTORS ([bbd6218](https://github.com/hywax/nuxt-cron/commit/bbd6218))
+
+### 🤖 CI
+
+- Build prepare ([9f37b1a](https://github.com/hywax/nuxt-cron/commit/9f37b1a))
+- Yarn prepare ([a6bc898](https://github.com/hywax/nuxt-cron/commit/a6bc898))
+- Build prepare on ci plan ([f289f60](https://github.com/hywax/nuxt-cron/commit/f289f60))
+
+### ❤️ Contributors
+
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+- Jiří Hofman ([@jirihofman](http://github.com/jirihofman))
+- Hywax ([@hywax](http://github.com/hywax))
+
+## v1.5.0...main
+
+[compare changes](https://github.com/hywax/nuxt-cron/compare/v1.5.0...main)
+
+### 📖 Documentation
+
+- Update readme ([d887816](https://github.com/hywax/nuxt-cron/commit/d887816))
+- Update async.md ([#54](https://github.com/hywax/nuxt-cron/pull/54))
+
+### 🏡 Chore
+
+- Update CONTRIBUTORS ([2bddae0](https://github.com/hywax/nuxt-cron/commit/2bddae0))
+- Eslint config ([08e8efb](https://github.com/hywax/nuxt-cron/commit/08e8efb))
+- Update CONTRIBUTORS ([bbd6218](https://github.com/hywax/nuxt-cron/commit/bbd6218))
+
+### 🤖 CI
+
+- Build prepare ([9f37b1a](https://github.com/hywax/nuxt-cron/commit/9f37b1a))
+- Yarn prepare ([a6bc898](https://github.com/hywax/nuxt-cron/commit/a6bc898))
+- Build prepare on ci plan ([f289f60](https://github.com/hywax/nuxt-cron/commit/f289f60))
+
+### ❤️ Contributors
+
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+- Jiří Hofman ([@jirihofman](http://github.com/jirihofman))
+- Hywax ([@hywax](http://github.com/hywax))
+
 ## v1.5.0
 
 [compare changes](https://github.com/hywax/nuxt-cron/compare/v1.4.6...v1.5.0)
