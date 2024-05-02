@@ -1,6 +1,6 @@
 # Getting started
 
-A Nuxt module for simplifying the use of Mongoose in your project.
+A Nuxt module for simplifying the use of cron jobs in your project.
 
 ## Installation
 
