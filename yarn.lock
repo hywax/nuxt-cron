@@ -2879,24 +2879,24 @@
     loupe "^2.3.7"
     pretty-format "^29.7.0"
 
-"@volar/language-core@2.3.4", "@volar/language-core@~2.3.1":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@volar/language-core/-/language-core-2.3.4.tgz#51de0263039a567a12a1eea90e02e59cdbf5de3b"
-  integrity sha512-wXBhY11qG6pCDAqDnbBRFIDSIwbqkWI7no+lj5+L7IlA7HRIjRP7YQLGzT0LF4lS6eHkMSsclXqy9DwYJasZTQ==
+"@volar/language-core@2.4.0-alpha.7", "@volar/language-core@~2.4.0-alpha.2":
+  version "2.4.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@volar/language-core/-/language-core-2.4.0-alpha.7.tgz#5856ddc0e6cc0d2694916e2c3ebee5d305b0ccb1"
+  integrity sha512-3ncRpnoVHCTzJeTiUyKwFTLb3jGfe1r5+S3MwRDPEjsV4LID6Rq6EmdRoF+aKw+Iwg63x4nV+/KYZjeYrp5mNA==
   dependencies:
-    "@volar/source-map" "2.3.4"
+    "@volar/source-map" "2.4.0-alpha.7"
 
-"@volar/source-map@2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-2.3.4.tgz#1d285610134fe565ca59a54e5a99c12befc70c93"
-  integrity sha512-C+t63nwcblqLIVTYXaVi/+gC8NukDaDIQI72J3R7aXGvtgaVB16c+J8Iz7/VfOy7kjYv7lf5GhBny6ACw9fTGQ==
+"@volar/source-map@2.4.0-alpha.7":
+  version "2.4.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@volar/source-map/-/source-map-2.4.0-alpha.7.tgz#1dd986aa05c7b6837a437200be53c6cd014d7dfe"
+  integrity sha512-yn66qcUXxUCyyW8PXMHE4z9RdfTO1OhP6BMa/JI0Ed6I6bggzkxvXsJOaMqw3EalCskGPuIWAbWgxwa3Hlp7SA==
 
-"@volar/typescript@~2.3.1":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@volar/typescript/-/typescript-2.3.4.tgz#bfa2834c79bd0b9a38cdfdf220fea0afa8ed64b0"
-  integrity sha512-acCvt7dZECyKcvO5geNybmrqOsu9u8n5XP1rfiYsOLYGPxvHRav9BVmEdRyZ3vvY6mNyQ1wLL5Hday4IShe17w==
+"@volar/typescript@~2.4.0-alpha.2":
+  version "2.4.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@volar/typescript/-/typescript-2.4.0-alpha.7.tgz#2597a1f1f5e3e158348fac40e330c458d1b32d67"
+  integrity sha512-MjvkhcIYPDZS5vbE4bSvbWi8z/VI47AY8MkPVgfa6xqTDLLxV6+QulJ8hIC3wYxh3dfVmA5MOoL5c3cZAsWbDQ==
   dependencies:
-    "@volar/language-core" "2.3.4"
+    "@volar/language-core" "2.4.0-alpha.7"
     path-browserify "^1.0.1"
     vscode-uri "^3.0.8"
 
@@ -3128,12 +3128,12 @@
   dependencies:
     rfdc "^1.4.1"
 
-"@vue/language-core@2.0.22":
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/@vue/language-core/-/language-core-2.0.22.tgz#2f8164ecc83f85f27301521d0a6ce37cc59bb23a"
-  integrity sha512-dNTAAtEOuMiz7N1s5tKpypnVVCtawxVSF5BukD0ELcYSw+DSbrSlYYSw8GuwvurodCeYFSHsmslE+c2sYDNoiA==
+"@vue/language-core@2.0.24":
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/@vue/language-core/-/language-core-2.0.24.tgz#078c9e6c31228e31f981c149123a0e0488963daa"
+  integrity sha512-997YD6Lq/66LXr3ZOLNxDCmyn13z9NP8LU1UZn9hGCDWhzlbXAIP0hOgL3w3x4RKEaWTaaRtsHP9DzHvmduruQ==
   dependencies:
-    "@volar/language-core" "~2.3.1"
+    "@volar/language-core" "~2.4.0-alpha.2"
     "@vue/compiler-dom" "^3.4.0"
     "@vue/shared" "^3.4.0"
     computeds "^0.0.1"
@@ -9010,10 +9010,10 @@ type-level-regexp@~0.1.17:
   resolved "https://registry.yarnpkg.com/type-level-regexp/-/type-level-regexp-0.1.17.tgz#ec1bf7dd65b85201f9863031d6f023bdefc2410f"
   integrity sha512-wTk4DH3cxwk196uGLK/E9pE45aLfeKJacKmcEgEOA/q5dnPGNxXt0cfYdFxb57L+sEpf1oJH4Dnx/pnRcku9jg==
 
-typescript@^5.5.2:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.2.tgz#c26f023cb0054e657ce04f72583ea2d85f8d0507"
-  integrity sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==
+typescript@^5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.3.tgz#e1b0a3c394190838a0b168e771b0ad56a0af0faa"
+  integrity sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==
 
 ufo@^1.1.2, ufo@^1.3.2, ufo@^1.4.0, ufo@^1.5.2, ufo@^1.5.3:
   version "1.5.3"
@@ -9555,13 +9555,13 @@ vue-template-compiler@^2.7.14:
     de-indent "^1.0.2"
     he "^1.2.0"
 
-vue-tsc@^2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-2.0.22.tgz#ddfef6b3a016d1b986008a3b8702f7e667db128c"
-  integrity sha512-lMBIwPBO0sxCcmvu45yt1b035AaQ8/XSXQDk8m75y4j0jSXY/y/XzfEtssQ9JMS47lDaR10O3/926oCs8OeGUw==
+vue-tsc@^2.0.24:
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/vue-tsc/-/vue-tsc-2.0.24.tgz#9938185492833baeda22b6c85a7ba316d4fd4873"
+  integrity sha512-1qi4P8L7yS78A7OJ7CDDxUIZPD6nVxoQEgX3DkRZNi1HI1qOfzOJwQlNpmwkogSVD6S/XcanbW9sktzpSxz6rA==
   dependencies:
-    "@volar/typescript" "~2.3.1"
-    "@vue/language-core" "2.0.22"
+    "@volar/typescript" "~2.4.0-alpha.2"
+    "@vue/language-core" "2.0.24"
     semver "^7.5.4"
 
 vue@^3.4.27:
