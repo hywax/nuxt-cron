@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.6.0
+
+[compare changes](https://github.com/hywax/nuxt-cron/compare/v1.5.1...v1.6.0)
+
+### 🚀 Enhancements
+
+- Add support nuxt 4 ([#66](https://github.com/hywax/nuxt-cron/pull/66))
+
+### 🩹 Fixes
+
+- Correct summary ([#60](https://github.com/hywax/nuxt-cron/pull/60))
+- Error build d.ts files ([31c3524](https://github.com/hywax/nuxt-cron/commit/31c3524))
+- Types not resolving ([2947cf7](https://github.com/hywax/nuxt-cron/commit/2947cf7))
+
+### 📖 Documentation
+
+- Change brand soft color ([aaca982](https://github.com/hywax/nuxt-cron/commit/aaca982))
+- Support nuxt version ([1bb61bc](https://github.com/hywax/nuxt-cron/commit/1bb61bc))
+
+### 🏡 Chore
+
+- Update CONTRIBUTORS ([a4ce3b2](https://github.com/hywax/nuxt-cron/commit/a4ce3b2))
+- Update CONTRIBUTORS ([ec3711d](https://github.com/hywax/nuxt-cron/commit/ec3711d))
+- Change typescript extends path ([02f49b3](https://github.com/hywax/nuxt-cron/commit/02f49b3))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Jules Libert <jules.lib@gmail.com>
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+- Guillaume Bonnefoy ([@whiterqbbit](http://github.com/whiterqbbit))
+
 ## v1.5.1
 
 [compare changes](https://github.com/hywax/nuxt-cron/compare/v1.5.0...v1.5.1)
