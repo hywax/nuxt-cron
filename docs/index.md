@@ -31,4 +31,7 @@ features:
   - title: Extendable by Nuxt modules
     icon: 📦
     details: Everything is done according to the official documentation
+  - title: Nuxt 3/4 support
+    icon: 🤝
+    details: Works with actual versions of Nuxt
 ---

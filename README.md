@@ -19,6 +19,7 @@ A Nuxt module for cron jobs in your app.
 - 🪄️&nbsp; TypeScript support
 - ✨&nbsp; Auto imports enabled
 - ⚡&nbsp; Zero configuration to start
+- 🤝&nbsp; Nuxt 3/4 support
 - 📦&nbsp; Extendable by [Nuxt modules](https://nuxt.com/modules)
 
 ## Installation
