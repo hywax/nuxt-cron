@@ -32,7 +32,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
-    const files = await scanHandlers(resolve(nuxt.options.srcDir, `server/${options.jobsDir}`))
+    const files = await scanHandlers(resolve(nuxt.options.serverDir, options.jobsDir))
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
 
     nuxt.options.build.transpile.push(runtimeDir)
