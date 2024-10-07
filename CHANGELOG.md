@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.7.0
+
+[compare changes](https://github.com/hywax/nuxt-cron/compare/v1.6.0...v1.7.0)
+
+### 🏡 Chore
+
+- Update CONTRIBUTORS ([e3f5828](https://github.com/hywax/nuxt-cron/commit/e3f5828))
+- CompatibilityVersion on playground ([628f86b](https://github.com/hywax/nuxt-cron/commit/628f86b))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+
 ## v1.6.0
 
 [compare changes](https://github.com/hywax/nuxt-cron/compare/v1.5.1...v1.6.0)
