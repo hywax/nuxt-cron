@@ -27,6 +27,10 @@ export function createCronHandler(jobs: CronJobs, options?: CronOptions): Cron[]
   const cronStack: Cron[] = []
 
   Object.keys(jobs).forEach((fn) => {
+    if (!jobs[fn]) {
+      throw new Error(`Cron job ${fn} is not defined`)
+    }
+
     options = {
       ...options,
       ...jobs[fn].options,
