@@ -42,6 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
       write: true,
       getContents() {
         return `
+          import { defineNitroPlugin } from '#imports'
           import { createCronHandler } from '${resolve('./runtime/server')}'
           ${files.map((file, index) => `import cronJob${index} from '${file.replace('.ts', '')}'`).join('\n')}
 
