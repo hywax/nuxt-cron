@@ -99,7 +99,7 @@ A huge thank you to everyone who is helping to improve `nuxt-cron`. Thanks to yo
 
 To become a contributor, please follow our [contributing guide](https://nuxt-cron.hywax.space/community/contributing.html).
 
-<img src="https://contrib.rocks/image?repo=hywax/nuxt-cron" alt="nuxt-cron" width="100%"/>
+<img src="https://contrib.rocks/image?repo=hywax/nuxt-cron" alt="nuxt-cron" />
 
 ## License
 
