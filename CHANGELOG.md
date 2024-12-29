@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.8.0
+
+[compare changes](https://github.com/hywax/nuxt-cron/compare/v1.7.0...v1.8.0)
+
+### 🩹 Fixes
+
+- DefineNitroPlugin is undefined after build in nitro.mjs ([#94](https://github.com/hywax/nuxt-cron/pull/94))
+
+### 💅 Refactors
+
+- ⚠️  Many minor corrections ([#86](https://github.com/hywax/nuxt-cron/pull/86))
+
+### 📖 Documentation
+
+- Remove width on contributors ([fbb15f5](https://github.com/hywax/nuxt-cron/commit/fbb15f5))
+
+### 🏡 Chore
+
+- Playground compatibility date ([fcbcd1a](https://github.com/hywax/nuxt-cron/commit/fcbcd1a))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Many minor corrections ([#86](https://github.com/hywax/nuxt-cron/pull/86))
+
+### ❤️ Contributors
+
+- Hywax ([@hywax](http://github.com/hywax))
+- Bot ([@hywax-assistant](http://github.com/hywax-assistant))
+- Joachim Bjørge <joachim.bj@gmail.com>
+
 ## v1.7.0
 
 [compare changes](https://github.com/hywax/nuxt-cron/compare/v1.6.0...v1.7.0)
