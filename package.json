@@ -2,7 +2,7 @@
   "name": "nuxt-cron",
   "type": "module",
   "version": "1.8.0",
-  "packageManager": "pnpm@9.15.2",
+  "packageManager": "pnpm@9.15.9",
   "description": "A Nuxt module for cron jobs in your app.",
   "license": "MIT",
   "repository": {
@@ -36,26 +36,26 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.15.0",
-    "cron": "^3.3.1",
-    "fast-glob": "^3.3.2"
+    "@nuxt/kit": "^3.17.3",
+    "cron": "^3.5.0",
+    "fast-glob": "^3.3.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
-    "@commitlint/cli": "^19.6.1",
-    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@hywax/vitepress-yandex-metrika": "^0.4.0",
     "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.15.0",
-    "@types/node": "^20.17.10",
-    "changelogen": "^0.5.7",
-    "eslint": "^9.17.0",
+    "@nuxt/schema": "^3.17.3",
+    "@types/node": "^20.17.46",
+    "changelogen": "^0.6.1",
+    "eslint": "^9.26.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
-    "nuxt": "^3.15.0",
-    "typescript": "^5.7.2",
-    "vitepress": "^1.5.0",
-    "vue-tsc": "^2.2.0"
+    "lint-staged": "^15.5.2",
+    "nuxt": "^3.17.3",
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.3",
+    "vue-tsc": "^2.2.10"
   },
   "lint-staged": {
     "*": "pnpm lint:fix"
